@@ -1,0 +1,26 @@
+---
+title: "HSV Data Table"
+output: html_document
+Name: Arianna Pierre, Jenna Polur
+---
+
+```{r}
+library(tidyverse)
+```
+
+
+
+```{r}
+Original_Data <- read.csv("https://raw.githubusercontent.com/apierre15/Final-Data-Science/main/HSE_Data.csv?token=AUX6FGZCDFGFVDUNBZFSND3BBGYNC")
+Original_Data
+```
+
+# Create a histogram for all Sodium data points
+
+# What does “missing sodium” represent – how is the data “managed”?
+
+#Create histogram with bins that accurately group low, normal and high sodium
+
+
+
+

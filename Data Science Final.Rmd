@@ -1,0 +1,27 @@
+---
+title: "HSV Data Table"
+output: html_document
+Name: Arianna Pierre, Jenna Polur
+---
+
+```{r}
+library(tidyverse)
+```
+
+
+
+```{r}
+HSV <- read.csv("https://raw.githubusercontent.com/apierre15/Final-Data-Science/main/HSV_Data_Table.csv?token=AUX6FGZKVYLLTVOF3RTAWVDBBCET4")
+HSV
+```
+
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

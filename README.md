@@ -4,7 +4,7 @@ Team members:
 
 Student 1: Arianna Pierre
 
-Student 2: Student name
+Student 2: Tai Polur
 
 Student 3: Student name
 

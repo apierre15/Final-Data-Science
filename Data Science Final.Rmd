@@ -8,27 +8,52 @@ Name: Arianna Pierre, Jenna Polur
 library(tidyverse)
 ```
 
-
+#We will explore the Health Systems Engineering Dataset:
 
 ```{r}
-Original_Data <- read.csv("https://raw.githubusercontent.com/apierre15/Final-Data-Science/main/HSE_Data.csv?token=AUX6FGZCDFGFVDUNBZFSND3BBGYNC")
+Original_Data <- read.csv("HSE_Data.csv")
 Original_Data
 ```
-# Create Sodium Data Table
+```{r}
+view(Original_Data)
+```
+
+Reshaping the Data ?
+
+#Data Summaries
+
+#Create Sodium Data Table
 ```{r}
 Sodium_Data <- Original_Data %>%
 select(Sodium,Sodium.missing.flag)
 Sodium_Data
 ```
-
-# Create a histogram for all Sodium data points
+#What does “missing sodium” represent – how is the data “managed”?
 ```{r}
-Sodium_Data %>%
-  ggplot(Data = Sodium_Data) +
-  geom_histogram()
+Sodium_Data%>%
+  filter(Sodium.missing.flag == "Yes")
 ```
 
-# What does “missing sodium” represent – how is the data “managed”?
+
+```
+```{r}
+Sodium_count <- Sodium_Data%>%
+  count("Sodium")
+Sodium_count
+```
+
+
+
+#Data Visualization
+
+Create a histogram for all Sodium data points
+```{r}
+Sodium_Data %>%
+  ggplot() + 
+  geom_histogram(aes(x= Sodium_count))
+```
+
+
 
 # Create histogram with bins that accurately group low, normal and high sodium
 

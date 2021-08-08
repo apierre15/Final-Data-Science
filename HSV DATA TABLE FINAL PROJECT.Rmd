@@ -1,0 +1,87 @@
+---
+title: "HSV Data Table"
+output: html_document
+Name: Arianna Pierre, Jenna Polur
+---
+
+```{r}
+library(tidyverse)
+```
+
+#We will explore the Health Systems Engineering Dataset:
+
+```{r}
+Original_Data <- read.csv("HSE_Data.csv")
+Original_Data
+```
+```{r}
+view(Original_Data)
+```
+
+Reshaping the Data ?
+
+#Data Summaries
+
+#Create Sodium Data Table
+```{r}
+Sodium_Data <- Original_Data %>%
+select(Sodium,Sodium.missing.flag)
+Sodium_Data
+```
+#What does “missing sodium” represent – how is the data “managed”?
+```{r}
+Sodium_Data%>%
+  filter(Sodium.missing.flag == "Yes")
+```
+
+
+```
+```{r}
+Sodium_count <- Sodium_Data%>%
+  count("Sodium")
+Sodium_count
+```
+
+
+
+#Data Visualization
+
+Create a histogram for all Sodium data points
+```{r}
+Sodium_Data %>%
+  ggplot() + 
+  geom_histogram(aes(x= Sodium_count))
+```
+
+
+
+# Create histogram with bins that accurately group low, normal and high sodium
+```{r}
+Sodium_Data %>% 
+ggplot () +
+geom_histogram(aes(hist))
+```
+
+#Recreate histogram using chart including second axis for cumulative distribution
+
+
+
+#Create pivot table with the sodium row and values
+```{r}
+library(pivottabler)
+```
+
+
+```{r}
+git remote add origin https://github.com/jpolur/HSVNOTEBOOK.git
+
+```
+
+
+#Change name for X axis to low normal high
+```{r}
+
+```
+
+
+

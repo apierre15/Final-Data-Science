@@ -1,61 +1,84 @@
 ---
 title: "HSV Data Table"
 output: html_document
-Name: Arianna Pierre, Jenna Polur
+Name: Arianna Pierre
 ---
 
+#Prerequisites
 ```{r}
 library(tidyverse)
+library(ggplot2)
+library(pivottabler)
 ```
 
-#We will explore the Health Systems Engineering Dataset:
+##We will explore the Health Systems Engineering Dataset:
 
 ```{r}
-Original_Data <- read.csv("HSE_Data.csv")
-Original_Data
+Original_Data <- read.csv("HSE_Data_Table.csv")
 ```
+#Data Description 
 ```{r}
-view(Original_Data)
+glimpse(Sodium_Data)
 ```
 
-Reshaping the Data ?
 
-#Data Summaries
+# Exploratory Data Analysis
 
-#Create Sodium Data Table
+## Data Summaries
+```{r}
+Original_Data%>%
+  filter(Sodium.missing.flag == "Yes")%>%
+  arrange(Age..Unit.Entry.)
+```
+
+
+### Sodium Data Table
 ```{r}
 Sodium_Data <- Original_Data %>%
-select(Sodium,Sodium.missing.flag)
+  select(Sodium ,Sodium.missing.flag)%>%
+  mutate(Levels = case_when(
+    between(Sodium, 112, 134.99) ~ "Low",
+    between(Sodium, 135, 145.0) ~ "Normal",
+    between(Sodium, 145.1, 163) ~ "High"))
 Sodium_Data
 ```
-#What does “missing sodium” represent – how is the data “managed”?
+## What does “missing sodium” represent – how is the data “managed”?
 ```{r}
 Sodium_Data%>%
   filter(Sodium.missing.flag == "Yes")
 ```
-
-
-```
+Missing sodium means when the patient has enough sodium in their body to show they did not set off a test that could mean they are critically ill. 
 ```{r}
-Sodium_count <- Sodium_Data%>%
-  count("Sodium")
-Sodium_count
+
 ```
 
 
-
-#Data Visualization
+# Data Visualization
 
 Create a histogram for all Sodium data points
+
 ```{r}
 Sodium_Data %>%
   ggplot() + 
-  geom_histogram(aes(x= Sodium_count))
+  geom_histogram(aes( x = Sodium), binwidth = 1) +
+  labs(title = "Sodium Point (Including missing) levels in Tampa Patients")
+
 ```
 
+# Sodium Level Histogram
 
+```{r}
+Sodium_levels <- Sodium_Data %>%
+  filter(Sodium.missing.flag == "No")%>%
+  ggplot() + 
+  geom_histogram(aes(x = Sodium, fill = Levels), binwidth = .75)+
+  labs(title=" All Available Sodium Levels in Tampa Patients", x="Sodium", y="Count")
 
-# Create histogram with bins that accurately group low, normal and high sodium
+Sodium_levels
+```
+- When sodium levels in the blood are *lower* than 135 meq/l, it is a condition called Hyponatremia.
+- Sodium levels *between* 135 and 145meq/l are within the normal range.
+- When sodium levels in the blood are *higher* than 145 meq/l, it is a condition called Hypernatremia.
 
 
 

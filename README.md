@@ -6,8 +6,10 @@ Student 1: Arianna Pierre
 
 Student 2: Tai Polur
 
-Student 3: Student name
 
-Summary
+# Summary
 
-Our project investigates the main characteristics of peoples health in recent years. We will be using the data available at: 
+Our general research topic is the amount of sodium found in admitted patients. The data is from either the clinic or operating room of a hospital.
+
+The variables are Sodium, and the levels: low, normal, and high, and Sodium Missing. 
+

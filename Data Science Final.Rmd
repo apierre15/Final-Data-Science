@@ -45,10 +45,6 @@ Sodium_Data <- Original_Data %>%
     between(Sodium, 145.1, 165) ~ "High"))
 Sodium_Data
 ```
-## What ages low, normal, or high sodium levels?
-```{r}
-Original_Data
-```
 
 ## What does “missing sodium” represent – how is the data “managed”?
 ```{r}
@@ -85,6 +81,8 @@ Sodium_levels
 - When sodium levels in the blood are *lower* than 135 meq/l, it is a condition called Hyponatremia.
 - Sodium levels *between* 135 and 145meq/l are within the normal range.
 - When sodium levels in the blood are *higher* than 145 meq/l, it is a condition called Hypernatremia.
+
+# What is the Median Age for each sodium level?
 
 The median age for Low sodium levels in Tampa Patients is 67 years old.
 ```{r}

@@ -1,6 +1,6 @@
 # Final Project for Data-Science
 Term 2021
-Team members:
+## Team members:
 
 Student 1: Arianna Pierre
 

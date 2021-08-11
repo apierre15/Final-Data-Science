@@ -1,7 +1,8 @@
 ---
-title: "Project Proposal"
+title: "R Notebook"
 output: html_notebook
 ---
+
 
 ## Section 1. Introduction
 Our general research topic is to determine the level of sodium in admitted patients. Throughout the data, the sodium level is either flagged or not, further variables would describe the admitted patients' sodium level as low, normal, or high.
@@ -9,8 +10,7 @@ Our general research topic is to determine the level of sodium in admitted patie
 Based on the data provided, the purpose of our research is to determine the median age of each level of sodium.
 
 ## Section 2. Data Analysis Plan
-First look over excel spreadsheet with the hospital data. Determine whether the patient sodium level is flagged 'Yes' or 'No', then determine if the patient has a low, normal, or high sodium level. After determining whether the patient is flagged 'Yes' or 'No', determine the median age for the respective sodium level of low, normal, or high. 
+Initial things we plan to explore is if there is a median age for each respective sodium level group of low, normal, or high and whether the patients sodium level was flagged 'yes' or 'no'
 
 ## Section 3. Data
-https://flpoly-my.sharepoint.com/:x:/r/personal/jpolur1487_floridapoly_edu/_layouts/15/Doc.aspx?sourcedoc=%7B7FC3B36F-806A-40E4-9A4C-BB901878B6E0%7D&file=Deidentified%20HSE%20data%20table_no%20severity(2).xlsx&action=default&mobileredirect=true
-
+The dataset is of patients ages, sodium level, why they were admitted, what body system required them to be admitted to, whether they died, where their sodium was taken

@@ -1,0 +1,27 @@
+---
+title: "Final Report for Intro to Data Science"
+output: html_notebook
+---
+
+# Our report:
+
+## Description of your dataset and research questions:
+The dataset  is data from patients admitted to the hospital, the data details the amount of sodium the patient has, and whether it was flagged or not. Our research question was to determine the median age of each level of sodium, the levels being low, normal, or high. 
+
+## Revised results from the proposal and data analysis:
+The revised results from the proposal and the data analysis presented that each respective age group were in an appropriate sodium level, apart from this there were a few outliers. 
+
+## Suggestions for improving our analysis,
+Our only suggestion for improving the analysis would be earlier clarification and a more extensive background on the data provided before the project began. 
+
+## What would you do differently if you were able to start over with the project ?
+What we would do differently if we started the project over is to have better communication with one another, as well as starting the project sooner. Also, it would have been helpful if we had reached out to Dr. Centeno earlier for clarification and further background on the data provided. 
+
+## What you would do next if you were going to continue work on the project?
+We would go more in depth. We would also expand our data with hospitals in the area. Not only that, we would further expand our current data with more in depth analysis and research 
+
+## Discussion
+The underlying meaning of our research is that we wished to determine if there were an increased amount of patients within a median age group that were in a specific sodium level group.
+
+## Conclusion 
+In conclusion, based on our data analysis and our research question provided us the answer that there was a median age level that corresponded with a specific sodium level group. This means that there was a common age that was found in a respective sodium level group, despite there being a few outliers.  We learned that these sodium levels are results of underlying conditions

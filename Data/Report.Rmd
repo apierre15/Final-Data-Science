@@ -1,0 +1,9 @@
+# Data Description: Health Systems Engineering
+
+We use the HSE_Data_Table.csv dataset available at https://github.com/apierre15/Final-Data-Science/blob/main/HSE_Data.csv
+
+This dataset includes information of sodium levels of Tampa Patients in 2014.
+
+The data fields included are: Sodium, Sodium Missing, Levels, Age, and Etc.
+
+Below we include some basic statistics for this datasets, including levels and range of years
